@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { Phone, Send, MapPin } from "lucide-react"
+import { Phone, Send, MapPin, PanelTop } from "lucide-react"
 import { Accordion } from "./ui/accordion"
 
 interface MainAccordionProps {
@@ -13,12 +13,12 @@ interface MainAccordionProps {
   }[]
 }
 
-export default function MainAccordion({ phones, telegrams, locations }: MainAccordionProps) {
+export default function MainAccordion({ phones, telegrams, locations, website }: MainAccordionProps) {
   const [openLocation, setOpenLocation] = useState<string | null>(null)
-
+  
   const items = [
     {
-      title: "Телефон",
+      title: (<div className="flex dispalay-flex items-center"><Phone className="h-5 mr-3"/><span>Телефон</span></div>),
       content: (
         <div className="space-y-2">
           {phones.map((phone, index) => (
@@ -26,8 +26,8 @@ export default function MainAccordion({ phones, telegrams, locations }: MainAcco
               key={index}
               href={`tel:${phone}`}
               className="flex items-center text-black py-2 px-4 rounded hover:bg-gray-100 transition-colors"
-            >
-              <Phone className="mr-2 text-black-600" size={20} />
+              >
+              <span className="mr-2 text-black-600"  />
               {phone}
             </a>
           ))}
@@ -35,7 +35,7 @@ export default function MainAccordion({ phones, telegrams, locations }: MainAcco
       ),
     },
     {
-      title: "Телеграм",
+      title: (<div className="flex dispalay-flex items-center"><Send className="h-5 mr-3"/><span>Телеграм</span></div>),
       content: (
         <div className="space-y-2">
           {telegrams.map((telegram, index) => (
@@ -47,7 +47,7 @@ export default function MainAccordion({ phones, telegrams, locations }: MainAcco
               className="flex items-center text-blue-600  py-2 px-4 rounded hover:bg-green-50 transition-colors"
               
             >
-              <Send className="mr-2 text-blue-600" size={20} />
+              <span className="mr-2 text-blue-600"  />
               {telegram}
             </a>
           ))}
@@ -55,7 +55,8 @@ export default function MainAccordion({ phones, telegrams, locations }: MainAcco
       ),
     },
     {
-      title: "Филиали",
+      title: (<div className="flex dispalay-flex items-center"><MapPin className="h-5 mr-3"/><span>Локация</span></div>),
+     
       content: (
         <Accordion
           items={locations.map((location) => ({
@@ -83,8 +84,29 @@ export default function MainAccordion({ phones, telegrams, locations }: MainAcco
         />
       ),
     },
+    {
+      title: (<div className="flex dispalay-flex items-center"><PanelTop className="h-5 mr-3"/><span>Сайт</span></div>),
+      content: (
+        <div className="space-y-2">
+          {website.map((web, index) => (
+            <a
+              key={index}
+              href={web}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-600  py-2 px-4 rounded hover:bg-green-50 transition-colors"
+              
+            >
+              <span className="mr-2 text-blue-600" />
+            
+              {web}
+            </a>
+          ))}
+        </div>
+      ),
+    },
   ]
-
+  
   return <Accordion items={items} />
 }
 
