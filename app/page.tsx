@@ -2,10 +2,11 @@ import Header from "./components/Header"
 import MainAccordion from "./components/MainAccordion"
 import Footer from "./components/Footer"
 
-const phones = ["+998 77-705-99-88", "+998 77-708-99-88", "+998 77-706-99-88"]
+const phones = [ "+998 77-705-99-88", "+998 77-706-99-88", "+998 77-708-99-88"]
 
 const telegrams = ["https://t.me/polivchi", "https://t.me/polivchi1", "https://t.me/polivchi2"]
-const website = ["https://polivchi.uz"]
+const website = ["www.polivchi.uz"]
+const instagram = ["https://instagram.com/polivchi"]
 
 const locations = [
   {
@@ -37,7 +38,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">Контакты</h2>
-            <MainAccordion phones={phones} telegrams={telegrams} locations={locations} website={website}/>
+            <MainAccordion phones={phones} telegrams={telegrams} locations={locations} instagram={instagram} website={website}/>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { Phone, Send, MapPin, PanelTop } from "lucide-react"
+import { Phone, Send, MapPin, PanelTop, Instagram } from "lucide-react"
 import { Accordion } from "./ui/accordion"
 
 interface MainAccordionProps {
@@ -13,7 +13,7 @@ interface MainAccordionProps {
   }[]
 }
 
-export default function MainAccordion({ phones, telegrams, locations, website }: MainAccordionProps) {
+export default function MainAccordion({ phones, telegrams, locations, website , instagram}: MainAccordionProps) {
   const [openLocation, setOpenLocation] = useState<string | null>(null)
   
   const items = [
@@ -100,6 +100,27 @@ export default function MainAccordion({ phones, telegrams, locations, website }:
               <span className="mr-2 text-blue-600" />
             
               {web}
+            </a>
+          ))}
+        </div>
+      ),
+    },
+    {
+      title: (<div className="flex dispalay-flex items-center"><Instagram className="h-5 mr-3"/><span>Инстаграм</span></div>),
+      content: (
+        <div className="space-y-2">
+          {instagram.map((insta, index) => (
+            <a
+              key={index}
+              href={insta}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-600  py-2 px-4 rounded hover:bg-green-50 transition-colors"
+              
+            >
+              <span className="mr-2 text-blue-600" />
+            
+              {insta}
             </a>
           ))}
         </div>
