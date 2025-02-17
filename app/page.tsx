@@ -18,7 +18,7 @@ const locations = [
   {
     name: "Polivchi - Улугбек филиал",
     address: "Самаркандская кольцевая дорога, 1, Самаркандская область",
-    yandexMapsLink: "https://yandex.uz/map-widget/v1/?ll=67.013122%2C39.676359&mode=whatshere&whatshere%5Bpoint%5D=67.013192%2C39.676561&whatshere%5Bzoom%5D=18&z=19",
+    yandexMapsLink: "https://yandex.uz/map-widget/v1/?from=mapframe&ll=67.014089%2C39.675946&mode=search&oid=158428626285&ol=biz&pt=66.975836%2C39.654397&sctx=ZAAAAAgCEAAaKAoSCRgFwePbwFBAETpa1ZKO1kNAEhIJNwhQpQvhrT8RIq629DL%2Fpj8iBgABAgMEBSgKOABA3lBIAWIec291cmNlPWJ1c2luZXNzX2FkdmVydDpleHBfcmVmagJ1ep0BzczMPaABAKgBAL0Bz%2BN0PYICKdCe0LHRgdC10YDQstCw0YLQvtGA0LjRjyDQo9C70YPQs9Cx0LXQutCwigIMMTYyODg4MTY1MjgzkgIDMTcxmgIMZGVza3RvcC1tYXBz&sll=67.014089%2C39.675946&source=mapframe&sspn=0.003852%2C0.001710&text=%D0%9E%D0%B1%D1%81%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%A3%D0%BB%D1%83%D0%B3%D0%B1%D0%B5%D0%BA%D0%B0&utm_source=mapframe&z=19",
     phone: "+998 77-706-99-88",
   },
   {
